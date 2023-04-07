@@ -1,0 +1,42 @@
+.info_container {
+  display: flex;
+  align-items: center;
+  margin-top: 7rem;
+
+  h1, h2 {
+    font-size: 3.2rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 4.6rem;
+    }
+  }
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.memoji_container {
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+  background-color: #bfe9db;
+
+  img {
+    margin-top: 1rem;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.card_container {
+  margin-bottom: 1rem;
+}
