@@ -1,0 +1,7 @@
+.title {
+  font-size: 3rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 4.6rem;
+  }
+}

@@ -8,12 +8,32 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-family: "Plus Jakarta Sans", sans-serif, Arial, Helvetica;
 }
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+hr {
+  margin-bottom: 3rem !important;
+  border-color: #bfc1c5 !important;
+}
+
+h1,
+h2 {
+  font-size: 3rem !important;
+}
+
+p {
+  margin-bottom: 2.4rem !important;
+}
+
 @media screen and (min-width: 768px) {
-  * {
-    font-size: 1.6rem;
+  h1 {
+    font-size: 4.6rem !important;
   }
 }

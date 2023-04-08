@@ -1,15 +1,23 @@
 .info_container {
-  display: flex;
   align-items: center;
-  margin-top: 7rem;
 
-  h1, h2 {
-    font-size: 3.2rem;
-
-    @media screen and (min-width: 768px) {
-      font-size: 4.6rem;
-    }
+  h1,
+  h2 {
+    width: fit-content;
   }
+}
+
+.info_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info_highlight {
+  padding: 0.8rem 1rem 1.2rem 1rem;
+  border-radius: 1rem;
+  background-color: #a80038;
+  color: #fff;
 }
 
 .image_container {
@@ -39,4 +47,19 @@
 
 .card_container {
   margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  border: solid 1px var(--bs-gray-200);
+  background-color: var(--bs-gray-100);
+}
+
+.card_title {
+  font-size: 2.4rem;
+}
+
+.card_subtitle {
+  font-size: 1.4rem;
+}
+
+.card_text {
+  margin-bottom: 0 !important;
 }
