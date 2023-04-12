@@ -24,7 +24,7 @@ export default function Header() {
               <Nav.Link>Inicio</Nav.Link>
             </Link>
             <NavDropdown title="Blog" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Español</NavDropdown.Item>
+              <NavDropdown.Item href="#blog">Español</NavDropdown.Item>
               <Link href="https://dev.to/juandadev" passHref legacyBehavior>
                 <NavDropdown.Item>English</NavDropdown.Item>
               </Link>
