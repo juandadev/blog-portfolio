@@ -6,19 +6,21 @@
 }
 
 .main_container {
+  margin: auto;
   padding-top: 7rem;
+  max-width: 90rem;
 }
 
 .footer_container {
   margin: 5rem 0.5rem 0.5rem 0.5rem;
-  background-color: #a80038;
+  background-color: var(--primary-color);
   border-radius: 1.8rem;
 
   p,
   a,
   strong {
     color: #fff;
-    margin: 0 !important;
+    margin: 0;
     font-size: 1.4rem;
   }
 }
