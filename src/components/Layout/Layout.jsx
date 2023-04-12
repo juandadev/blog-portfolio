@@ -1,11 +1,14 @@
 import React from "react";
 import Head from "next/head";
-import { Col, Container, Row } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import Header from "../Header/Header";
 import s from "./Layout.module.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Elipse from "../Icons/Elipse";
 import Link from "next/link";
+import Twitter from "../Icons/Twitter";
+import Linkedin from "../Icons/Linkedin";
+import Github from "../Icons/Github";
+import Devto from "../Icons/devto";
 
 export default function Layout({ children, title }) {
   const getCurrentYear = () => {
@@ -48,12 +51,18 @@ export default function Layout({ children, title }) {
                 &copy; {getCurrentYear()} Creado con 💚 por Juan Daniel Martinez
               </p>
               <div className={s.links}>
-                <Link href="https://twitter.com/champiniel">Twitter</Link>
-                <Link href="https://www.linkedin.com/in/juandadev/">
-                  LinkedIn
+                <Link href="https://twitter.com/champiniel">
+                  <Twitter size={22} />
                 </Link>
-                <Link href="https://github.com/juandadev">GitHub</Link>
-                <Link href="https://dev.to/juandadev">DEV.to</Link>
+                <Link href="https://www.linkedin.com/in/juandadev/">
+                  <Linkedin size={22} />
+                </Link>
+                <Link href="https://github.com/juandadev">
+                  <Github size={22} />
+                </Link>
+                <Link href="https://dev.to/juandadev">
+                  <Devto size={22} />
+                </Link>
               </div>
             </div>
           </Container>

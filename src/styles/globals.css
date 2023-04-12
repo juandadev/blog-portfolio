@@ -2,6 +2,14 @@
 
 :root {
   font-size: 10px;
+  --primary-color: #2D68F6;
+  --primary-color-100: #E5ECFE;
+  --primary-color-200: #CAD9FD;
+  --primary-color-300: #B0C6FC;
+  --accent-color: #F62D68;
+  --accent-color-100: #FEE5EC;
+  --accent-color-200: #FDCAD9;
+  --accent-color-300: #FCB0C6;
 }
 
 * {
@@ -19,21 +27,42 @@ body,
 }
 
 hr {
-  margin-bottom: 3rem !important;
-  border-color: #bfc1c5 !important;
+  margin-bottom: 3rem;
+  border-color: #bfc1c5;
 }
 
 h1,
 h2 {
-  font-size: 3rem !important;
+  font-size: 3rem;
+}
+
+.link {
+  color: var(--bs-dark);
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--bs-dark);
+  opacity: 0.5;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+  opacity: 0.5;
 }
 
 p {
-  margin-bottom: 2.4rem !important;
+  margin-bottom: 2.4rem;
 }
 
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 4.6rem !important;
+    font-size: 4.6rem;
   }
 }

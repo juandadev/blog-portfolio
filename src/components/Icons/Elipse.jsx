@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./Icons.module.scss";
 
 export default function Elipse({ size, stroke, white = false }) {
   return (
@@ -10,10 +11,10 @@ export default function Elipse({ size, stroke, white = false }) {
       viewBox={`0 0 22 22`}
     >
       <circle
+        className={white ? s.elipse_white : s.elipse }
         cx="11"
         cy="11"
         r="9"
-        stroke={`${white ? "#FFFFFF" : "#A80038"}`}
         strokeWidth={stroke}
       ></circle>
     </svg>

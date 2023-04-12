@@ -28,8 +28,6 @@ export default function Header() {
               <Link href="https://dev.to/juandadev" passHref legacyBehavior>
                 <NavDropdown.Item>English</NavDropdown.Item>
               </Link>
-              <NavDropdown.Divider className="mb-2" />
-              <NavDropdown.Item href="#action/3.3">Admin</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
