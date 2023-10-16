@@ -36,24 +36,14 @@ h2 {
   font-size: 3rem;
 }
 
-.link {
-  color: var(--bs-dark);
-  text-decoration: underline;
-}
-
-.link:hover {
-  color: var(--bs-dark);
-  opacity: 0.5;
-}
-
 a {
-  color: #ffffff;
-  text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: underline;
   transition: 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #ffffff;
+  color: var(--primary-color);
   opacity: 0.5;
 }
 

@@ -25,11 +25,11 @@ export default function About() {
             ingeniería de software, a veces de una manera más visual, con el
             objetivo de que sea más digerible para cualquiera que lo lea 😁 Si
             te interesa leer mis posts, puedes dirigirte a mi{" "}
-            <a className="link" href="https://dev.to/juandadev">
+            <a href="https://dev.to/juandadev">
               perfil en Dev.to
             </a>{" "}
             que es donde posteo más frecuentemente (English only), o también{" "}
-            <a className="link" href="">
+            <a href="">
               aquí mismo
             </a>{" "}
             en esta página, la cual suelo desahogarme más escribiendo en Español

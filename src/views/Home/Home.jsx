@@ -31,7 +31,7 @@ export default function Home() {
             Tengo {calculateRelativeDate("1997-02-27")} años de edad y me
             especializo en Typescript, React, Node y últimamente enfocado en web
             performance.{" "}
-            <Link href="/about" className="link">
+            <Link href="/about">
               Saber más <ArrowRight size={22} className={s.arrow} />
             </Link>
           </p>
