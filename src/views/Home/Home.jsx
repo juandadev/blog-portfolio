@@ -3,11 +3,12 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import memoji from "../../assets/images/memoji.png";
-import s from "./Home.module.scss";
 import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
 import ArrowRight from "../../components/Icons/ArrowRight";
 import { calculateRelativeDate } from "../../utils";
+
+import s from "./Home.module.scss";
 
 const mockData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 
@@ -17,7 +18,7 @@ export default function Home() {
       <Row className={`mb-4 ${s.info_container}`}>
         <Col className={`mb-4 ${s.info_text}`} xs={12} md={8}>
           <h1 className={`${s.info_highlight}`}>Hola! Soy Juanda 👋🏻</h1>
-          <h2>Desarrollador web</h2>
+          <h2 className={s.info_2}>Desarrollador web</h2>
         </Col>
         <Col xs={12} md={4} className={`${s.image_container}`}>
           <div className={s.memoji_container}>
