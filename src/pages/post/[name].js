@@ -1,4 +1,4 @@
-import { default as PostPage } from "@/views/Post/Post";
+import { default as PostPage } from "../../views/Post/Post";
 import { useRouter } from "next/router";
 
 export default function Post() {

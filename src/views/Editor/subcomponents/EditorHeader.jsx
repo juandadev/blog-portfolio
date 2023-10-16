@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
-import Elipse from "@/components/Icons/Elipse";
+import Elipse from "../../../components/Icons/Elipse";
 
 export default function EditorHeader({ s }) {
   return (

@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 

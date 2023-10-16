@@ -1,4 +1,4 @@
-import { splitMetadataAndContent } from "@/utils";
+import { splitMetadataAndContent } from "../../../utils";
 import { readFileSync } from "fs";
 import path from "path";
 

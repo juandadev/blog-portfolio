@@ -5,9 +5,9 @@ import Card from "react-bootstrap/Card";
 import memoji from "../../assets/images/memoji.png";
 import s from "./Home.module.scss";
 import Link from "next/link";
-import Layout from "@/components/Layout/Layout";
-import ArrowRight from "@/components/Icons/ArrowRight";
-import { calculateRelativeDate } from "@/utils";
+import Layout from "../../components/Layout/Layout";
+import ArrowRight from "../../components/Icons/ArrowRight";
+import { calculateRelativeDate } from "../../utils";
 
 const mockData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 

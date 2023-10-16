@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { Col, Row } from "react-bootstrap";
 import s from "./About.module.scss";
-import { calculateRelativeDate } from "@/utils";
+import { calculateRelativeDate } from "../../utils";
 
 export default function About() {
   return (
