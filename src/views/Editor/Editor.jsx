@@ -1,4 +1,3 @@
-import React from "react";
 import EditorHeader from "./subcomponents/EditorHeader";
 import EditorBox from "./subcomponents/EditorBox";
 import s from "./Editor.module.scss";

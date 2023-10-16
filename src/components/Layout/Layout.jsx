@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import Container from "react-bootstrap/Container";
 import Header from "../Header/Header";
@@ -51,7 +50,7 @@ export default function Layout({ children, title }) {
                 &copy; {getCurrentYear()} Creado con 💚 por Juan Daniel Martinez
               </p>
               <div className={s.links}>
-                <Link href="https://twitter.com/champiniel">
+                <Link href="https://twitter.com/juandadotdev">
                   <Twitter size={22} />
                 </Link>
                 <Link href="https://www.linkedin.com/in/juandadev/">

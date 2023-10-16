@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import Elipse from "@/components/Icons/Elipse";

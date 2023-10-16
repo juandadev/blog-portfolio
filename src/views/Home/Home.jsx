@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -8,6 +7,7 @@ import s from "./Home.module.scss";
 import Link from "next/link";
 import Layout from "@/components/Layout/Layout";
 import ArrowRight from "@/components/Icons/ArrowRight";
+import { calculateRelativeDate } from "@/utils";
 
 const mockData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 
@@ -17,24 +17,20 @@ export default function Home() {
       <Row className={`mb-4 ${s.info_container}`}>
         <Col className={`mb-4 ${s.info_text}`} xs={12} md={8}>
           <h1 className={`${s.info_highlight}`}>Hola! Soy Juanda 👋🏻</h1>
-          <h2>un desarrollador web</h2>
+          <h2>Desarrollador web</h2>
         </Col>
         <Col xs={12} md={4} className={`${s.image_container}`}>
           <div className={s.memoji_container}>
-            <Image
-              width={125}
-              height={163}
-              src={memoji}
-              alt="Imagen de caricatura alusiva al autor"
-            />
+            <Image width={125} height={163} src={memoji} alt="Memoji avatar" />
           </div>
         </Col>
       </Row>
       <Row className="mb-3">
         <Col>
           <p>
-            Creo aplicaciones web que me gusta consumir, comparto conocimientos
-            y experiencias a través de mi blog.{" "}
+            Tengo {calculateRelativeDate("1997-02-27")} años de edad y me
+            especializo en Typescript, React, Node y últimamente enfocado en web
+            performance.{" "}
             <Link href="/about" className="link">
               Saber más <ArrowRight size={22} className={s.arrow} />
             </Link>
@@ -56,7 +52,9 @@ export default function Home() {
               <Card.Body className={s.card_body}>
                 <Card.Text className={s.card_subtitle}>React</Card.Text>
                 <Card.Text className={s.card_title}>Card Title</Card.Text>
-                <Card.Text className={`text-muted ${s.card_subtitle}`}>7 Dec, 2022</Card.Text>
+                <Card.Text className={`text-muted ${s.card_subtitle}`}>
+                  7 Dec, 2022
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
