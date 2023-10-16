@@ -1,8 +1,8 @@
 ---
-title: how to get things done
-description: this is greate
-tags: money, income, coding
-conver_image: ayobami.jpg
+title: Markdown Example
+description: This is a post just to show an example of markdown
+tags: Post
+cover_image: ''
 ---
 
 This is an example note.
@@ -74,18 +74,40 @@ Here's our logo (hover to see the title text):
 Inline-style: 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-Reference-style: 
+Reference-style:
+
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://images.unsplash.com/photo-1682695799561-033f55f75b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80 "Logo Title Text 2"
 
 ## Code and Syntax Highlighting
 
 Inline `code` has `back-ticks around` it.
 
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+```jsx
+import React from "react";
+import uniquePropHOC from "./lib/unique-prop-hoc";
+
+// this comment is here to demonstrate an extremely long line length, well beyond what you should probably allow in your own code, though sometimes you'll be highlighting code you can't refactor, which is unfortunate but should be handled gracefully
+
+class Expire extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { component: props.children }
+    }
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                component: null
+            });
+        }, this.props.time || this.props.seconds * 1000);
+    }
+    render() {
+        return this.state.component;
+    }
+}
+
+export default uniquePropHOC(["time", "seconds"])(Expire);
 ```
  
 ```python
