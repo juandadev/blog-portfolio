@@ -7,7 +7,7 @@ import Link from "next/link";
 import Twitter from "../Icons/Twitter";
 import Linkedin from "../Icons/Linkedin";
 import Github from "../Icons/Github";
-import Devto from "../Icons/devto";
+import Devto from "../Icons/Devto";
 
 export default function Layout({ children, title }) {
   const getCurrentYear = () => {

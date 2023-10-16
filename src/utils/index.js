@@ -7,10 +7,13 @@ export const calculateRelativeDate = (year) => {
   return age;
 };
 
-export const extractMetadataFromMarkdown = (markdown) => {
+export const splitMetadataAndContent = (markdown) => {
   const charactersBetweenGroupedHyphens = /^---([\s\S]*?)---/;
+  const charactersAfterHyphens = /---[\s\S]*?---\s*([\s\S]*)/;
   const metadataMatched = markdown.match(charactersBetweenGroupedHyphens);
   const metadata = metadataMatched[1];
+  const contentMatched = markdown.match(charactersAfterHyphens);
+  const content = contentMatched[1];
 
   if (!metadata) {
     return {};
@@ -24,5 +27,5 @@ export const extractMetadataFromMarkdown = (markdown) => {
     return accumulator;
   }, {});
 
-  return metadataObject;
+  return { metadata: metadataObject, content };
 };
