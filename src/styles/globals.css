@@ -12,12 +12,15 @@
   --accent-color-300: #FCB0C6;
 }
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif, Arial, Helvetica;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 1.8rem;
-  font-family: "Plus Jakarta Sans", sans-serif, Arial, Helvetica;
 }
 
 html,

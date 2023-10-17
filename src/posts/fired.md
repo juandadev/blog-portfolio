@@ -1,6 +1,6 @@
 ---
 title: How I Got Fired From my Dream Job
-description: A short story about how I felt after I got fired from my first big job in tech industry.
+description: A short story about how I felt after I got fired from my first big job in the tech industry.
 tags: journal
 cover_image: https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
 ---
