@@ -85,7 +85,7 @@ export default function Post() {
         <>
           <div className={s.headingContainer}>
             <p className={s.headingTag}>{post.metadata?.tags}</p>
-            <h1>{post.metadata?.title}</h1>
+            <h1 className={s.title}>{post.metadata?.title}</h1>
             <p className={s.headingText}>{post.metadata?.description}</p>
             <Image
               alt="Post cover photo"
