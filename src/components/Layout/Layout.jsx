@@ -38,7 +38,7 @@ export default function Layout({ children, title }) {
           </div>
           <div className={`mt-4 mb-4 ${s.footer_nav}`}>
             <Link href="/about">Acerca de mí</Link>
-            <Link href="#blog">Blog</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="#contact">Contacto</Link>
           </div>
           <hr className="mb-4" />

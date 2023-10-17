@@ -4,9 +4,10 @@ import Layout from "../../components/Layout/Layout";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Image from "next/image";
 
 import s from "../../styles/Post.module.scss";
-import Image from "next/image";
+import { format } from "date-fns";
 
 const customComponents = {
   h1(props) {
@@ -59,7 +60,7 @@ const customComponents = {
         PreTag="div"
       />
     ) : (
-      <div {...rest} className={s.code}>
+      <div {...rest} className={`code ${s.code}`}>
         <code>{children}</code>
       </div>
     );
@@ -74,15 +75,13 @@ export default function Post() {
     if (router.isReady) {
       fetch(`/api/post/${router.query.name}`)
         .then((response) => response.json())
-        .then((data) => {
-          setPost(data);
-        });
+        .then((data) => setPost(data));
     }
   }, [router.query.name, router.isReady]);
 
   return (
     <Layout title={post.metadata?.title || "Post"}>
-      {post ? (
+      {Object.keys(post).length !== 0 ? (
         <>
           <div className={s.headingContainer}>
             <p className={s.headingTag}>{post.metadata?.tags}</p>
@@ -95,6 +94,10 @@ export default function Post() {
               src={post.metadata?.cover_image}
               className={s.coverImage}
             />
+            <div className={s.publish}>
+              <p>Por {post.metadata?.author}</p>
+              <p>Publicado el {format(new Date(post.metadata?.date), "P")}</p>
+            </div>
           </div>
           <ReactMarkdown components={customComponents}>
             {post.content}

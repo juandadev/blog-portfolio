@@ -21,12 +21,9 @@ export default function Header() {
           <Link href="/" passHref legacyBehavior>
             <Nav.Link>Inicio</Nav.Link>
           </Link>
-          <NavDropdown title="Blog" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#blog">Español</NavDropdown.Item>
-            <Link href="https://dev.to/juandadev" passHref legacyBehavior>
-              <NavDropdown.Item>English</NavDropdown.Item>
-            </Link>
-          </NavDropdown>
+          <Link href="/blog" passHref legacyBehavior>
+            <Nav.Link>Blog</Nav.Link>
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
