@@ -1,7 +1,8 @@
-import Layout from "@/components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { Col, Row } from "react-bootstrap";
 import s from "./About.module.scss";
-import { calculateRelativeDate } from "@/utils";
+import { calculateRelativeDate } from "../../utils";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -29,9 +30,9 @@ export default function About() {
               perfil en Dev.to
             </a>{" "}
             que es donde posteo más frecuentemente (English only), o también{" "}
-            <a href="">
+            <Link href="/blog">
               aquí mismo
-            </a>{" "}
+            </Link>{" "}
             en esta página, la cual suelo desahogarme más escribiendo en Español
             :)
           </p>
