@@ -6,6 +6,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import s from "../../styles/Post.module.scss";
+import Image from "next/image";
 
 const customComponents = {
   h1(props) {
@@ -81,9 +82,27 @@ export default function Post() {
 
   return (
     <Layout title={post.metadata?.title || "Post"}>
-      <ReactMarkdown components={customComponents}>
-        {post.content}
-      </ReactMarkdown>
+      {post ? (
+        <>
+          <div className={s.headingContainer}>
+            <p className={s.headingTag}>{post.metadata?.tags}</p>
+            <h1>{post.metadata?.title}</h1>
+            <p className={s.headingText}>{post.metadata?.description}</p>
+            <Image
+              alt="Post cover photo"
+              width={900}
+              height={500}
+              src={post.metadata?.cover_image}
+              className={s.coverImage}
+            />
+          </div>
+          <ReactMarkdown components={customComponents}>
+            {post.content}
+          </ReactMarkdown>
+        </>
+      ) : (
+        "Loading..."
+      )}
     </Layout>
   );
 }
