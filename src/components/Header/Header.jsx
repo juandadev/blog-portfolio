@@ -9,28 +9,26 @@ import s from "./Header.module.scss";
 export default function Header() {
   return (
     <Navbar fixed="top" className={s.navbar_container}>
-      <Container>
-        <Link href="/" passHref legacyBehavior>
-          <Navbar.Brand className={`font-bold ${s.brand_icon}`}>
-            <Elipse size={19} stroke={4} />
-            <strong>Juanda</strong>
-          </Navbar.Brand>
-        </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Link href="/" passHref legacyBehavior>
-              <Nav.Link>Inicio</Nav.Link>
+      <Link href="/" passHref legacyBehavior>
+        <Navbar.Brand className={`font-bold ${s.brand_icon}`}>
+          <Elipse size={19} stroke={4} />
+          <strong>Juanda</strong>
+        </Navbar.Brand>
+      </Link>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          <Link href="/" passHref legacyBehavior>
+            <Nav.Link>Inicio</Nav.Link>
+          </Link>
+          <NavDropdown title="Blog" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#blog">Español</NavDropdown.Item>
+            <Link href="https://dev.to/juandadev" passHref legacyBehavior>
+              <NavDropdown.Item>English</NavDropdown.Item>
             </Link>
-            <NavDropdown title="Blog" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#blog">Español</NavDropdown.Item>
-              <Link href="https://dev.to/juandadev" passHref legacyBehavior>
-                <NavDropdown.Item>English</NavDropdown.Item>
-              </Link>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 }

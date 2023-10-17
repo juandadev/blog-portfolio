@@ -25,48 +25,44 @@ export default function Layout({ children, title }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={s.page_container}>
-        <Container>
-          <Header />
-          <main className={s.main_container}>{children}</main>
-        </Container>
+      <Container className={s.page_container}>
+        <Header />
+        <main className={s.main_container}>{children}</main>
         <footer className={s.footer_container}>
-          <Container>
-            <div className={`pt-5 ${s.footer_info}`}>
-              <Link href="/" className={s.footer_icon}>
-                <Elipse size={16} stroke={4} white />
-                <strong>Juanda</strong>
+          <div className={`pt-5 ${s.footer_info}`}>
+            <Link href="/" className={s.footer_icon}>
+              <Elipse size={16} stroke={4} white />
+              <strong>Juanda</strong>
+            </Link>
+            <p>Desarrollador web</p>
+          </div>
+          <div className={`mt-4 mb-4 ${s.footer_nav}`}>
+            <Link href="/about">Acerca de mí</Link>
+            <Link href="#blog">Blog</Link>
+            <Link href="#contact">Contacto</Link>
+          </div>
+          <hr className="mb-4" />
+          <div className={`pb-5 ${s.links_container}`}>
+            <p>
+              &copy; {getCurrentYear()} Creado con 💚 por Juan Daniel Martinez
+            </p>
+            <div className={s.links}>
+              <Link href="https://twitter.com/juandadotdev">
+                <Twitter size={22} />
               </Link>
-              <p>Desarrollador web</p>
+              <Link href="https://www.linkedin.com/in/juandadev/">
+                <Linkedin size={22} />
+              </Link>
+              <Link href="https://github.com/juandadev">
+                <Github size={22} />
+              </Link>
+              <Link href="https://dev.to/juandadev">
+                <Devto size={22} />
+              </Link>
             </div>
-            <div className={`mt-4 mb-4 ${s.footer_nav}`}>
-              <Link href="/about">Acerca de mí</Link>
-              <Link href="#blog">Blog</Link>
-              <Link href="#contact">Contacto</Link>
-            </div>
-            <hr className="mb-4" />
-            <div className={`pb-5 ${s.links_container}`}>
-              <p>
-                &copy; {getCurrentYear()} Creado con 💚 por Juan Daniel Martinez
-              </p>
-              <div className={s.links}>
-                <Link href="https://twitter.com/juandadotdev">
-                  <Twitter size={22} />
-                </Link>
-                <Link href="https://www.linkedin.com/in/juandadev/">
-                  <Linkedin size={22} />
-                </Link>
-                <Link href="https://github.com/juandadev">
-                  <Github size={22} />
-                </Link>
-                <Link href="https://dev.to/juandadev">
-                  <Devto size={22} />
-                </Link>
-              </div>
-            </div>
-          </Container>
+          </div>
         </footer>
-      </div>
+      </Container>
     </>
   );
 }

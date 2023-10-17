@@ -40,7 +40,7 @@ export default function Home() {
       </Row>
       <Row className={s.posts_container}>
         <Col xs={12}>
-          <h2 className="mb-4">Últimos posts</h2>
+          <h2 className={`mb-4 ${s.info_2}`}>Últimos posts</h2>
           <hr />
         </Col>
         {mockData.map((item) => (

@@ -36,8 +36,6 @@ const customComponents = {
     return <blockquote className={s.blockquote}>{props.children}</blockquote>;
   },
   img(props) {
-    console.log(props);
-
     return (
       <img
         className={s.img}
