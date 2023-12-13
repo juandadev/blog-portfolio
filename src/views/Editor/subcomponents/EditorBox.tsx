@@ -32,7 +32,7 @@ export default function EditorBox({ s }) {
   const ref = useRef(null);
 
   const handleResize = (event) => {
-    const newWidth = event.pageX - ref.current.getBoundingClientRect().left;
+    const newWidth = event.pageX - ref.current?.getBoundingClientRect().left;
     setWidth(newWidth);
   };
 
