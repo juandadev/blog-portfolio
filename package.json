@@ -10,15 +10,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-dom": "^18.2.17",
     "bootstrap": "^5.2.3",
     "date-fns": "^2.30.0",
     "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
+    "eslint-config-next": "^14.0.4",
     "gray-matter": "^4.0.3",
-    "next": "13.2.3",
-    "react": "18.2.0",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-markdown": "^8.0.6",
     "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.61.0"
