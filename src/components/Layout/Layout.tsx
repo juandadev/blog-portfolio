@@ -1,21 +1,19 @@
-import Head from "next/head";
-import Container from "react-bootstrap/Container";
-import Header from "../Header/Header";
-import s from "./Layout.module.scss";
-import Elipse from "../Icons/Elipse";
-import Link from "next/link";
-import Twitter from "../Icons/Twitter";
-import Linkedin from "../Icons/Linkedin";
-import Github from "../Icons/Github";
-import Devto from "../Icons/Devto";
+import Head from 'next/head'
+import Container from 'react-bootstrap/Container'
+import Header from '../Header/Header'
+import s from './Layout.module.scss'
+import Elipse from '../Icons/Elipse'
+import Link from 'next/link'
+import XTwitter from '../Icons/XTwitter'
+import Linkedin from '../Icons/Linkedin'
+import Github from '../Icons/Github'
+import Devto from '../Icons/Devto'
 
 export default function Layout({ children, title }) {
   const getCurrentYear = () => {
-    const currentDate = new Date();
-    const currentYear = currentDate.getUTCFullYear();
-
-    return currentYear;
-  };
+    const currentDate = new Date()
+    return currentDate.getUTCFullYear()
+  }
 
   return (
     <>
@@ -47,8 +45,8 @@ export default function Layout({ children, title }) {
               &copy; {getCurrentYear()} Creado con 💚 por Juan Daniel Martinez
             </p>
             <div className={s.links}>
-              <Link href="https://twitter.com/juandadotdev">
-                <Twitter size={22} />
+              <Link href="https://x.com/juandadotdev">
+                <XTwitter size={22} />
               </Link>
               <Link href="https://www.linkedin.com/in/juandadev/">
                 <Linkedin size={22} />
@@ -64,5 +62,5 @@ export default function Layout({ children, title }) {
         </footer>
       </Container>
     </>
-  );
+  )
 }

@@ -1,5 +1,4 @@
 .card_container {
-  margin-bottom: 1rem;
   border: solid 1px var(--bs-gray-200);
   background-color: var(--bs-gray-100);
   border-radius: 1.5rem;
@@ -14,7 +13,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 1.5rem 1.5rem 0 0;
-  
+
   @media screen and (min-width: 768px) {
     height: 15rem;
     width: 20rem;
