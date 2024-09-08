@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import ReactMarkdown from "react-markdown";
+import { useRef, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default function EditorBox({ s }) {
   const [markdownText, setMarkdownText] = useState(`# Welcome to Markdown
@@ -27,27 +27,29 @@ export default function EditorBox({ s }) {
   
   You can see examples of ordered and unordered lists above.
   
-  ###### Code Blocks`);
-  const [width, setWidth] = useState(200);
-  const ref = useRef(null);
+  ###### Code Blocks`)
+  const [width, setWidth] = useState(200)
+  const ref = useRef(null!)
 
   const handleResize = (event) => {
-    const newWidth = event.pageX - ref.current?.getBoundingClientRect().left;
-    setWidth(newWidth);
-  };
+    const currentRef = ref.current as HTMLDivElement
+
+    const newWidth = event.pageX - currentRef?.getBoundingClientRect().left
+    setWidth(newWidth)
+  }
 
   const handleOnMouseDown = () => {
-    document.addEventListener("mousemove", handleResize);
-    document.addEventListener("mouseup", () => {
-      document.removeEventListener("mousemove", handleResize);
-    });
-  };
+    document.addEventListener('mousemove', handleResize)
+    document.addEventListener('mouseup', () => {
+      document.removeEventListener('mousemove', handleResize)
+    })
+  }
 
   const handleEditorChange = (event) => {
-    const { value } = event.target;
+    const { value } = event.target
 
-    setMarkdownText(value);
-  };
+    setMarkdownText(value)
+  }
 
   return (
     <div className={s.wrapper}>
@@ -61,8 +63,12 @@ export default function EditorBox({ s }) {
           {markdownText}
         </textarea>
         <span
+          role="button"
+          tabIndex={0}
           className={s.markdown_editor_edge}
           onMouseDown={handleOnMouseDown}
+          onKeyDown={() => {
+          }}
         />
       </div>
       <div className={s.markdown_preview}>
@@ -71,5 +77,5 @@ export default function EditorBox({ s }) {
         </ReactMarkdown>
       </div>
     </div>
-  );
+  )
 }

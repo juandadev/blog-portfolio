@@ -8,8 +8,7 @@ author: Juan Daniel Martínez
 ---
 
 > **Nota:** Este artículo es una traducción al español del post
->
-original [Level Up Your Object-Oriented Programming Knowledge with Nintendo Switch 🎮👾](https://dev.to/juandadev/level-up-your-oop-knowledge-with-nintendo-switch-78n),
+> original [Level Up Your Object-Oriented Programming Knowledge with Nintendo Switch 🎮👾](https://dev.to/juandadev/level-up-your-oop-knowledge-with-nintendo-switch-78n),
 > con
 > ayuda
 > de ChatGPT.
@@ -208,9 +207,7 @@ así:
 
 ```ts
 // NintendoSwitch class file
-checkBatteryLife()
-:
-void {
+checkBatteryLife(): void {
   console.log(`This Nintendo Switch has ${this.batteryLife} hours of battery life remaining.`);
 }
 
