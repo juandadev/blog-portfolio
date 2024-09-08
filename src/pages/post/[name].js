@@ -40,6 +40,8 @@ const customComponents = {
   img(props) {
     return (
       <Image
+        width={900}
+        height={500}
         className={s.img}
         src={props.src}
         alt={props.alt}
