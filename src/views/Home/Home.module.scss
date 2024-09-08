@@ -10,7 +10,12 @@
 .info_text {
   display: flex;
   flex-direction: column;
+  gap: 1.6rem;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
 }
 
 .info_highlight {
@@ -26,7 +31,14 @@
 }
 
 .info_2 {
-  font-size: 3rem;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    font-size: 3rem;
+  }
 }
 
 .image_container {
@@ -37,23 +49,26 @@
   @media screen and (min-width: 768px) {
     margin-top: 0;
   }
-}
-
-.memoji_container {
-  display: flex;
-  justify-content: center;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 100%;
-  background-color: var(--accent-color-300);
 
   img {
-    margin-top: 1rem;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.2));
-    -webkit-filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.2));
+    width: 150px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    object-fit: cover;
   }
 }
 
 .arrow {
   fill: #000;
+}
+
+.posts_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.posts_heading {
+
 }

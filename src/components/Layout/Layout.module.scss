@@ -7,9 +7,13 @@
 
 .main_container {
   margin: auto;
-  padding-top: 7rem;
+  padding-top: 8rem;
   max-width: 90rem;
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 10rem;
+  }
 }
 
 .footer_container {
